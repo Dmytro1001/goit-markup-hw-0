@@ -109,20 +109,17 @@
 
                 <ul class="items-job list">
                     <li class="item-job">
-                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-1.jpg"
-                                alt="Дестопні додатка" min-width="370" min-height="294">
+                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-1.jpg" alt="Дестопні додатка" width="370" height="294">
                             <p class="name-pic-work">Десктопні додатки</p>
                         </div>
                     </li>
                     <li class="item-job">
-                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-2.jpg"
-                                alt="Мобільні додатки" min-width="370" min-height="294">
+                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-2.jpg" alt="Мобільні додатки" width="370" height="294">
                             <p class="name-pic-work">Мобільні додатки</p>
                         </div>
                     </li>
                     <li class="item-job">
-                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-3.jpg"
-                                alt="Стилізація продукту" min-width="370" min-height="294">
+                        <div class="package-pic-job"><img class="pic-job" src="./images/gallery/box-3.jpg" alt="Стилізація продукту" width="370" height="294">
                             <p class="name-pic-work">Дизайнерські рішення</p>
                         </div>
                     </li>
@@ -137,8 +134,7 @@
 
                 <ul class="items-team list">
                     <li class="item-team">
-                        <img class="photo-commands" src="./images/photos-commands/photo-1.jpg" alt="Ігор Дем'яненко"
-                            min-width="270" min-height="260">
+                        <img class="photo-commands" src="./images/photos-commands/photo-1.jpg" alt="Ігор Дем'яненко" width="270" height="260">
                         <div class="team-container">
                             <h3 class="name-title">Ігор Дем'яненко</h3>
                             <p class="prof-text" lang="en">Product Designer</p>
@@ -163,8 +159,7 @@
                         </div>
                     </li>
                     <li class="item-team">
-                        <img class="photo-commands" src="./images/photos-commands/photo-2.jpg" alt="Ольга Рєпіна"
-                            min-width="270" min-height="260">
+                        <img class="photo-commands" src="./images/photos-commands/photo-2.jpg" alt="Ольга Рєпіна" width="270" height="260">
                         <div class="team-container">
                             <h3 class="name-title">Ольга Рєпіна</h3>
                             <p class="prof-text" lang="en">Frontend Developer</p>
@@ -189,8 +184,7 @@
                         </div>
                     </li>
                     <li class="item-team">
-                        <img class="photo-commands" src="./images/photos-commands/photo-3.jpg" alt="Микола Тарасов"
-                            min-width="270" min-height="260">
+                        <img class="photo-commands" src="./images/photos-commands/photo-3.jpg" alt="Микола Тарасов" width="270" height="260">
                         <div class="team-container">
                             <h3 class="name-title">Микола Тарасов</h3>
                             <p class="prof-text" lang="en">Marketing</p>
@@ -215,8 +209,7 @@
                         </div>
                     </li>
                     <li class="item-team">
-                        <img class="photo-commands" src="./images/photos-commands/photo-4.jpg" alt="Михайло Єрмаков"
-                            min-width="270" min-height="260">
+                        <img class="photo-commands" src="./images/photos-commands/photo-4.jpg" alt="Михайло Єрмаков" width="270" height="260">
                         <div class="team-container">
                             <h3 class="name-title">Михайло Єрмаков</h3>
                             <p class="prof-text" lang="en">UI Designer</p>
@@ -329,9 +322,11 @@
                 </li>
             </ul>
             <div class="subscription">
-                <form name="subscription">
-                    <label for="user-email" class="label-footer">Підпишіться на розсилку
-                        <input type="email" name="email" id="user-email" placeholder="Email">
+                <form class="form-footer" name="subscription">
+                    <label class="label-footer">
+                        <span class="label-footer-text">Підпишіться на розсилку</span>
+                        
+                        <input type="email" class="footer-input" name="user-email" placeholder="Email" required>
                     </label>
                     <button type="submit" class="btn-subscription">Підписатися
                         <svg class="icon-subscription">
@@ -347,19 +342,57 @@
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
-            <button class="btn-close" type="button" data-modal-close><svg aria-label=" button close" class="btn-close-icon">
+            <button class="btn-close-modal-window" type="button" data-modal-close><svg aria-label=" button close"
+                    class="btn-close-icon">
                     <use href="./images/icons.svg/symbol-defs.svg#icon-close-button"></use>
                 </svg></button>
 
-            <form name="subscription request" class="form-list">
-                <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-                <label for="user-name" class="label-text">Ім'я</label><input type="name" name="user-name" id="user-name" placeholder="Ім'я">
-                <label for=""class="label-text">Телефон</label><input type="text">
-                <label for=""class="label-text">Пошта</label><input type="text">
-                <label for=""class="label-text">Коментар</label><input type="text">
-                <input type="text"><label for=""></label>
-                <button type="submit" ></button>
+            <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
+
+            <form class="form-list">
+                <label class="modal-form-field-lab">
+                    <span class="modal-form-field-desc">Ім'я</span>
+                    <span class="modal-form-input-wrapper">
+                       <input type="text" class="modal-form-input" required pattern="[a-zA-Zа-яА-ЯіІїЇ']+" name="user-name">
+                    <svg aria-label="user-name" class="input-placeholder-icon"><use href="./images/icons.svg/symbol-defs.svg#icon-user-name"></use></svg> 
+                    </span>
+                                        
+                </label>
+                <label class="modal-form-field-lab">
+                    <span class="modal-form-field-desc">Телефон</span>
+                    <span class="modal-form-input-wrapper"><input type="tel" class="modal-form-input" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                        title="xxx-xxx-xx-xx" name="user-phone">
+                        <svg aria-label="user-phone" class="input-placeholder-icon">
+                            <use href="./images/icons.svg/symbol-defs.svg#icon-user-phone"></use>
+                        </svg></span>
+                    
+                </label>
+                <label class="modal-form-field-lab">
+                    <span class="modal-form-field-desc">Пошта</span>
+                    <span class="modal-form-input-wrapper">
+                     <input type="email" class="modal-form-input" required title="email@mail.com" name="user-email">
+                    <svg aria-label="user-email" class="input-placeholder-icon">
+                        <use href="./images/icons.svg/symbol-defs.svg#icon-user-email"></use>
+                    </svg>   
+                    </span>
+                </label>
+                <label class="modal-form-field-com">
+                    <span class="modal-form-field-desc">Коментар</span>
+                    <textarea name="user-comment" class="modal-form-comment" placeholder="Введіть текст"></textarea>
+                </label>
+                <label class="modal-form-field-checkbox">
+                    <input type="checkbox" class="modal-form-checkbox" name="user-concent" required>
+                    <svg class="modal-form-checkbox-icon">
+                            <use class="checkbox-icon" href="./images/icons.svg/symbol-defs.svg#icon-check"></use>
+                        </svg>
+                    Погоджуюся з розсилкою та
+                    приймаю&nbsp;<a class="checkbox-link" href="#">Умови
+                        договору</a>
+                </label>
+            
+                <button type="submit" class="submit-btn">Відправити</button>
             </form>
+
         </div>
     </div>
 
@@ -367,3 +400,4 @@
 </body>
 
 </html>
+
